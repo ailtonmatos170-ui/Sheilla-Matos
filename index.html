@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Sheilla Matos | Lingerie & Moda Íntima Premium</title>
+  <!-- Tags Meta de SEO -->
+  <meta name="description"
+    content="Descubra a coleção exclusiva de moda íntima de luxo na Loja Sheilla Matos. Lingeries sensuais, rendas sofisticadas e designs sedutores com qualidade premium.">
+  <meta name="keywords"
+    content="lingerie de luxo, moda intima, Sheilla Matos, lingeries sensuais, body de renda, corselete preto">
+  <meta name="author" content="Loja Sheilla Matos">
+
+  <!-- CDN do Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#E6DFD5',   /* Fundo primário claro e quente */
+              bronze: '#5C4A37',  /* Textos e bordas premium */
+              gold: '#C5A880',    /* Destaques e detalhes dourados */
+              dark: '#1A1510',    /* Preto profundo e rico */
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            logo: ['Cinzel', 'serif'],
+            indie: ['Indie Flower', 'cursive'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS personalizado para gradientes customizados, barra de rolagem e transições de zoom -->
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+
+<body
+  class="bg-brand-cream text-brand-dark font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
+
+  <!-- ================= SEÇÃO DO CABEÇALHO ================= -->
+  <header class="fixed top-0 left-0 w-full z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+
+      <!-- Esquerda: Logo (Redesign vetorial limpo e elegante) -->
+      <a href="#" class="flex items-center shrink-0" aria-label="Sheilla Matos Loja - Página Inicial">
+        <img src="assets/logo-sheilla-matos.png" alt="Sheilla Matos Loja"
+          class="h-10 sm:h-12 lg:h-14 w-auto object-contain">
+      </a>
+
+      <!-- Centro: Links de Navegação (Desktop) -->
+      <nav
+        class="hidden md:flex items-center space-x-6 lg:space-x-10 text-xs sm:text-sm font-medium tracking-widest text-brand-bronze uppercase">
+        <a href="#lançamentos"
+          class="hover:text-brand-dark transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Lançamentos</a>
+        <a href="#destaques"
+          class="hover:text-brand-dark transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Destaques</a>
+        <a href="#plus-size"
+          class="hover:text-brand-dark transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Plus
+          Size</a>
+        <a href="#depoimentos"
+          class="hover:text-brand-dark transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Opiniões</a>
+      </nav>
+
+      <!-- Lado Direito: Ações do Usuário (Entrar / Cadastrar) e Utilitários -->
+      <div class="flex items-center space-x-3 sm:space-x-4 text-brand-bronze">
+
+        <!-- Links de Login/Cadastro no Desktop -->
+        <div
+          class="!hidden lg:flex items-center space-x-3 text-xs tracking-wider uppercase font-semibold text-brand-bronze mr-2">
+          <a href="#" id="nav-login-btn" class="hover:text-brand-dark transition-colors py-2">Entrar</a>
+          <span class="w-[1px] h-3 bg-brand-bronze opacity-20"></span>
+          <a href="#" id="nav-register-btn" class="hover:text-brand-dark transition-colors py-2">Cadastrar</a>
+        </div>
+
+        <span class="!hidden lg:inline-block w-[1px] h-5 bg-brand-bronze opacity-10 mr-2"></span>
+
+        <!-- Ícone de Busca -->
+        <a href="#" id="search-btn" class="hover:text-brand-dark transition-colors p-2" aria-label="Pesquisar">
+          <i class="fa-solid fa-magnifying-glass text-lg"></i>
+        </a>
+
+        <!-- Ícone de Favoritos -->
+        <a href="#" class="favorite-btn hover:text-brand-dark transition-colors p-2 hidden sm:inline-block"
+          aria-label="Favoritos">
+          <i class="fa-regular fa-heart text-lg"></i>
+        </a>
+
+        <!-- Ícone do Carrinho -->
+        <a href="#" id="cart-btn" class="hover:text-brand-dark transition-colors p-2 relative" aria-label="Carrinho">
+          <i class="fa-solid fa-bag-shopping text-lg"></i>
+          <span class="absolute top-1 right-1 w-2 h-2 bg-brand-gold rounded-full"></span>
+        </a>
+
+        <!-- Menu Hamburguer Mobile (visível em mobile/tablet) -->
+        <button id="mobile-menu-btn"
+          class="md:hidden text-brand-bronze hover:text-brand-dark focus:outline-none p-2 ml-1" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= DRAWER DE NAVEGAÇÃO MOBILE ================= -->
+  <div id="mobile-navigation"
+    class="fixed inset-y-0 right-0 w-full max-w-sm bg-brand-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col border-l border-brand-bronze border-opacity-10">
+    <div class="h-20 sm:h-24 flex items-center justify-between px-6 border-b border-brand-bronze border-opacity-10">
+      <span class="font-logo text-sm tracking-wider font-semibold text-brand-bronze">MENU</span>
+      <button id="mobile-nav-close" class="text-brand-bronze hover:text-brand-dark focus:outline-none p-2"
+        aria-label="Fechar Menu">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- AÇÕES DO USUÁRIO NO MOBILE (Entrar e Cadastrar) -->
+    <div
+      class="!hidden px-6 py-6 border-b border-brand-bronze border-opacity-10 bg-black bg-opacity-5 flex space-x-3 shrink-0">
+      <button id="mobile-login-btn"
+        class="flex-1 text-center py-2.5 border border-brand-bronze text-brand-bronze text-xs font-bold tracking-widest uppercase hover:bg-brand-bronze hover:text-white transition-all rounded-none">Entrar</button>
+      <button id="mobile-register-btn"
+        class="flex-1 text-center py-2.5 bg-brand-dark text-[#E6DFD5] text-xs font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-brand-dark transition-all rounded-none">Cadastrar</button>
+    </div>
+
+    <nav
+      class="flex-1 px-8 py-8 flex flex-col space-y-5 text-base tracking-[0.2em] font-medium text-brand-bronze uppercase overflow-y-auto">
+      <a href="#lançamentos"
+        class="hover:text-brand-dark transition-colors py-2 border-b border-brand-bronze border-opacity-5">Lançamentos</a>
+      <a href="#destaques"
+        class="hover:text-brand-dark transition-colors py-2 border-b border-brand-bronze border-opacity-5">Destaques</a>
+      <a href="#plus-size"
+        class="hover:text-brand-dark transition-colors py-2 border-b border-brand-bronze border-opacity-5">Plus Size</a>
+      <a href="#depoimentos"
+        class="hover:text-brand-dark transition-colors py-2 border-b border-brand-bronze border-opacity-5">Depoimentos</a>
+      <a href="#contato" class="hover:text-brand-dark transition-colors py-2">Fale Conosco</a>
+    </nav>
+    <div
+      class="p-8 border-t border-brand-bronze border-opacity-10 bg-black bg-opacity-5 flex flex-col space-y-4 shrink-0">
+      <div class="flex items-center space-x-3 text-xs tracking-wider text-brand-bronze">
+        <i class="fa-solid fa-phone"></i>
+        <span>(33) 98751-2055</span>
+      </div>
+      <div class="flex items-center space-x-3 text-xs tracking-wider text-brand-bronze">
+        <i class="fa-brands fa-instagram"></i>
+        <span>@lojasheilla_matos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Espaçador para evitar sobreposição de conteúdo devido ao cabeçalho fixo -->
+  <div class="h-20 sm:h-24"></div>
+
+  <!-- ================= PÁGINA 1: SEÇÃO HERO ("NOVA OBSESSÃO") ================= -->
+  <section id="lançamentos"
+    class="relative overflow-hidden min-h-[calc(100vh-6rem)] sm:min-h-[calc(100vh-8rem)] flex items-center px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+      <!-- Coluna Esquerda: Tipografia Premium e Chamada para Ação -->
+      <div class="lg:col-span-5 flex flex-col justify-center text-center lg:text-left z-10">
+        <!-- Rótulo de Destaque -->
+        <span
+          class="text-xs sm:text-sm font-sans tracking-[0.4em] uppercase text-brand-gold font-bold mb-4 sm:mb-6 block animate-fade-in">PARA
+          MULHERES INTENSAS E SEGURAS
+        </span>
+
+        <!-- Título Principal de Luxo -->
+        <div class="relative mb-6 sm:mb-8">
+          <h2
+            class="font-serif-luxury text-5xl sm:text-7xl lg:text-8xl leading-[0.8] font-light text-brand-bronze tracking-wide uppercase select-none opacity-30 animate-fade-in">
+            SINTA-SE
+          </h2>
+          <h2
+            class="font-serif-luxury text-5xl sm:text-7xl lg:text-8xl tracking-widest font-normal text-brand-dark -mt-4 sm:-mt-6 lg:-mt-8 uppercase animate-fade-in-delayed-1">
+            PODEROSA
+          </h2>
+        </div>
+
+        <!-- Descrição -->
+        <p
+          class="text-sm sm:text-base leading-relaxed text-brand-bronze text-opacity-90 max-w-md mx-auto lg:mx-0 mb-8 sm:mb-10 font-sans-modern font-light animate-fade-in-delayed-2">
+          Deixe-se envolver pela sofisticação da renda artesanal e recortes que valorizam as suas curvas naturais. Uma
+          coleção desenhada para mulheres seguras que expressam sua sensualidade com elegância e poder.
+        </p>
+
+        <!-- Botão de Ação Premium -->
+        <div class="animate-fade-in-delayed-3">
+          <a href="#destaques"
+            class="premium-btn inline-block bg-brand-dark text-[#E6DFD5] hover:text-white font-sans text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase px-8 sm:px-12 py-4 sm:py-5 border border-brand-dark rounded-none">
+            COMPRE AGORA
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Grade Dupla de Imagens Sensuais (Combinando com a Imagem 3) -->
+      <div class="lg:col-span-7 relative flex justify-center items-center w-full">
+        <!-- Efeito de brilho dourado de fundo -->
+        <div class="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-brand-gold opacity-10 filter blur-[80px] -z-10">
+        </div>
+
+        <!-- Grade de Molduras de Imagem -->
+        <div class="grid grid-cols-2 gap-4 w-full max-w-2xl relative z-10 px-4 sm:px-0">
+
+          <!-- Imagem 1: Pose sensual principal (Retrato Vertical) -->
+          <div
+            class="img-zoom-container bg-[#D2C5B5] shadow-2xl border border-white border-opacity-30 self-start mt-6 transition-all duration-700 hover:-translate-y-2">
+            <img src="assets/hero_1.png" alt="Modelo sensual usando lingerie preta de renda sofisticada Sheilla Matos"
+              class="w-full h-[320px] sm:h-[480px] lg:h-[520px] object-cover object-center" loading="eager">
+          </div>
+
+          <!-- Imagem 2: Pose alternativa / Close-up -->
+          <div
+            class="img-zoom-container bg-[#D2C5B5] shadow-2xl border border-white border-opacity-30 self-end mb-6 transition-all duration-700 hover:-translate-y-2">
+            <img src="assets/hero_2.png" alt="Close-up de lingerie de luxo preta com transparências e bordados em renda"
+              class="w-full h-[320px] sm:h-[620px] lg:h-[520px] object-cover object-center" loading="eager">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BANNER DE VALORES DA MARCA ================= -->
+  <section
+    class="bg-brand-dark py-8 sm:py-10 text-[#E6DFD5] relative overflow-hidden border-y border-brand-gold border-opacity-20">
+    <div
+      class="absolute inset-0 opacity-5 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:16px_16px]">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-4 text-center">
+
+        <!-- Valor 1 -->
+        <div class="flex flex-col items-center px-2 reveal-on-scroll">
+          <div
+            class="w-10 h-10 rounded-full border border-brand-gold border-opacity-30 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-gem text-brand-gold text-lg"></i>
+          </div>
+          <h3 class="font-serif-luxury text-lg tracking-widest font-bold uppercase mb-2 text-[#E6DFD5]">QUALIDADE
+            PREMIUM</h3>
+          <p class="text-sm font-sans-modern font-medium opacity-90 max-w-xs leading-relaxed">
+            Rendas nobres importadas, costuras reforçadas e toque extremamente macio na pele.
+          </p>
+        </div>
+
+        <!-- Valor 2 -->
+        <div class="flex flex-col items-center px-2 reveal-on-scroll">
+          <div
+            class="w-10 h-10 rounded-full border border-brand-gold border-opacity-30 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-wand-magic-sparkles text-brand-gold text-lg"></i>
+          </div>
+          <h3 class="font-serif-luxury text-lg tracking-widest font-bold uppercase mb-2 text-[#E6DFD5]">SENSUALIDADE &
+            PODER</h3>
+          <p class="text-sm font-sans-modern font-medium opacity-90 max-w-xs leading-relaxed">
+            Modelagens anatômicas exclusivas desenhadas para valorizar e contornar suas formas.
+          </p>
+        </div>
+
+        <!-- Valor 3 -->
+        <div class="flex flex-col items-center px-2 reveal-on-scroll">
+          <div
+            class="w-10 h-10 rounded-full border border-brand-gold border-opacity-30 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-lock text-brand-gold text-lg"></i>
+          </div>
+          <h3 class="font-serif-luxury text-lg tracking-widest font-bold uppercase mb-2 text-[#E6DFD5]">COMPRA SEGURA
+          </h3>
+          <p class="text-sm font-sans-modern font-medium opacity-90 max-w-xs leading-relaxed">
+            Atendimento humanizado e personalizado de consultoria de tamanhos via WhatsApp.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 2: CARROSSEL DE DESTAQUES ================= -->
+  <section id="destaques" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative bg-brand-cream overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Cabeçalho da Seção com Setas (Combinando com a Imagem 4) -->
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-8 sm:mb-10 reveal-on-scroll">
+        <div class="text-center sm:text-left mb-4 sm:mb-0">
+          <span class="text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-brand-gold block mb-1">SUAS
+            MELHORES
+            ESCOLHAS</span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl font-medium tracking-wide uppercase text-brand-dark">
+            DESTAQUES</h2>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="flex space-x-3">
+          <button data-carousel-prev
+            class="w-12 h-12 rounded-full border border-brand-bronze border-opacity-30 hover:border-brand-dark flex items-center justify-center text-brand-bronze hover:text-brand-dark transition-all focus:outline-none"
+            aria-label="Anterior">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          <button data-carousel-next
+            class="w-12 h-12 rounded-full border border-brand-bronze border-opacity-30 hover:border-brand-dark flex items-center justify-center text-brand-bronze hover:text-brand-dark transition-all focus:outline-none"
+            aria-label="Próximo">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Container Externo do Slider do Carrossel -->
+      <div class="relative overflow-hidden -mx-4 px-4 sm:mx-0 sm:px-0">
+        <!-- Trilho do Carrossel (Deslocado dinamicamente pelo JS) -->
+        <div data-carousel-track class="carousel-track flex gap-6">
+
+          <!-- Card de Produto 1 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 flex flex-col group reveal-on-scroll">
+            <div
+              class="relative img-zoom-container bg-[#D2C5B5] aspect-[2/3] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+              <span
+                class="absolute top-3 left-3 bg-brand-dark text-white text-[9px] font-bold tracking-widest px-2.5 py-1 uppercase z-10">DESTAQUE</span>
+              <button
+                class="favorite-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white bg-opacity-80 hover:bg-white text-brand-dark flex items-center justify-center z-10 transition-colors"
+                aria-label="Favoritar">
+                <i class="fa-regular fa-heart text-sm"></i>
+              </button>
+              <div class="product-img-wrapper">
+                <img src="assets/product_1.png" alt="Conjunto Todo Trabalhado em Renda com Bojo e Alça Regulável"
+                  class="product-img-front" loading="lazy">
+                <img src="assets/product_1_hover.jpg" alt="Conjunto Renda - Vista do Produto" class="product-img-back"
+                  loading="lazy">
+              </div>
+            </div>
+            <!-- Detalhes -->
+            <div class="flex flex-col flex-grow px-1">
+              <!-- Avaliações -->
+              <div class="flex items-center space-x-1 mb-2 text-[#F5C453]">
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <span class="text-[10px] text-brand-bronze font-medium ml-1">(4)</span>
+              </div>
+              <h3
+                class="font-sans-modern font-semibold text-xs tracking-wider uppercase text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-1 leading-relaxed">
+                CONJUNTO TODO TRABALHADO EM RENDA COM BOJO E ALÇA REGULÁVEL
+              </h3>
+              <p class="font-sans-modern text-sm font-bold text-brand-bronze mt-auto mb-3">
+                R$ 54,99
+              </p>
+              <button data-product-whatsapp
+                data-product-name="Body Sensual Preto Sem Bojo Rendado com Argolas e Algemas"
+                class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-[10px] font-bold tracking-widest uppercase py-3 border border-brand-dark hover:border-brand-gold flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>COMPRAR VIA WHATSAPP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card de Produto 2 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 flex flex-col group reveal-on-scroll">
+            <div
+              class="relative img-zoom-container bg-[#D2C5B5] aspect-[2/3] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+              <span
+                class="absolute top-3 left-3 bg-brand-dark text-white text-[9px] font-bold tracking-widest px-2.5 py-1 uppercase z-10">DESTAQUE</span>
+              <button
+                class="favorite-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white bg-opacity-80 hover:bg-white text-brand-dark flex items-center justify-center z-10 transition-colors"
+                aria-label="Favoritar">
+                <i class="fa-regular fa-heart text-sm"></i>
+              </button>
+              <div class="product-img-wrapper">
+                <img src="assets/product_2.png" alt="Conjunto Selina Preto" class="product-img-front" loading="lazy">
+                <img src="assets/product_2_hover.jpg" alt="Conjunto Selina Preto - Vista do Produto"
+                  class="product-img-back" loading="lazy">
+              </div>
+            </div>
+            <!-- Detalhes -->
+            <div class="flex flex-col flex-grow px-1">
+              <!-- Avaliações -->
+              <div class="flex items-center space-x-1 mb-2 text-[#F5C453]">
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <span class="text-[10px] text-brand-bronze font-medium ml-1">(9)</span>
+              </div>
+              <h3
+                class="font-sans-modern font-semibold text-xs tracking-wider uppercase text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-1 leading-relaxed">
+                CONJUNTO PLUS SIZE
+              </h3>
+              <p class="font-sans-modern text-sm font-bold text-brand-bronze mt-auto mb-3">
+                R$ 64,99
+              </p>
+              <button data-product-whatsapp data-product-name="Conjunto Selina Preto"
+                class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-[10px] font-bold tracking-widest uppercase py-3 border border-brand-dark hover:border-brand-gold flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>COMPRAR VIA WHATSAPP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card de Produto 3 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 flex flex-col group reveal-on-scroll">
+            <div
+              class="relative img-zoom-container bg-[#D2C5B5] aspect-[2/3] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+              <span
+                class="absolute top-3 left-3 bg-brand-dark text-white text-[9px] font-bold tracking-widest px-2.5 py-1 uppercase z-10">DESTAQUE</span>
+              <button
+                class="favorite-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white bg-opacity-80 hover:bg-white text-brand-dark flex items-center justify-center z-10 transition-colors"
+                aria-label="Favoritar">
+                <i class="fa-regular fa-heart text-sm"></i>
+              </button>
+              <div class="product-img-wrapper">
+                <img src="assets/product_3.png" alt="Mini Corselete Preto com Saia Fetiche Persex e Choker"
+                  class="product-img-front" loading="lazy">
+                <img src="assets/product_3_hover.jpg"
+                  alt="Mini Corselete Preto com Saia Fetiche Persex e Choker - Vista do Produto"
+                  class="product-img-back" loading="lazy">
+              </div>
+            </div>
+            <!-- Detalhes -->
+            <div class="flex flex-col flex-grow px-1">
+              <!-- Avaliações -->
+              <div class="flex items-center space-x-1 mb-2 text-[#F5C453]">
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <span class="text-[10px] text-brand-bronze font-medium ml-1">(7)</span>
+              </div>
+              <h3
+                class="font-sans-modern font-semibold text-xs tracking-wider uppercase text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-1 leading-relaxed">
+                CONJUNTO SENSUAL TRABALHADO NO TULE
+              </h3>
+              <p class="font-sans-modern text-sm font-bold text-brand-bronze mt-auto mb-3">
+                R$ 64,99
+              </p>
+              <button data-product-whatsapp data-product-name="Mini Corselete Preto com Saia Fetiche Persex e Choker"
+                class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-[10px] font-bold tracking-widest uppercase py-3 border border-brand-dark hover:border-brand-gold flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>COMPRAR VIA WHATSAPP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card de Produto 4 -->
+          <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 flex flex-col group reveal-on-scroll">
+            <div
+              class="relative img-zoom-container bg-[#D2C5B5] aspect-[2/3] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+              <span
+                class="absolute top-3 left-3 bg-brand-dark text-white text-[9px] font-bold tracking-widest px-2.5 py-1 uppercase z-10">DESTAQUE</span>
+              <button
+                class="favorite-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-white bg-opacity-80 hover:bg-white text-brand-dark flex items-center justify-center z-10 transition-colors"
+                aria-label="Favoritar">
+                <i class="fa-regular fa-heart text-sm"></i>
+              </button>
+              <div class="product-img-wrapper">
+                <img src="assets/product_4.png" alt="Body Fantasia Sensual da Cor do Pecado" class="product-img-front"
+                  loading="lazy">
+                <img src="assets/product_4_hover.jpg" alt="Body Fantasia Sensual da Cor do Pecado - Vista do Produto"
+                  class="product-img-back" loading="lazy">
+              </div>
+            </div>
+            <!-- Detalhes -->
+            <div class="flex flex-col flex-grow px-1">
+              <!-- Avaliações -->
+              <div class="flex items-center space-x-1 mb-2 text-[#F5C453]">
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <i class="fa-solid fa-star text-xs"></i>
+                <span class="text-[10px] text-brand-bronze font-medium ml-1">(18)</span>
+              </div>
+              <h3
+                class="font-sans-modern font-semibold text-xs tracking-wider uppercase text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-1 leading-relaxed">
+                CAMISOLA COM DETALHES EM RENDA
+              </h3>
+              <p class="font-sans-modern text-sm font-bold text-brand-bronze mt-auto mb-3">
+                R$ 65,00
+              </p>
+              <button data-product-whatsapp data-product-name="Body Fantasia Sensual da Cor do Pecado"
+                class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-[10px] font-bold tracking-widest uppercase py-3 border border-brand-dark hover:border-brand-gold flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>COMPRAR VIA WHATSAPP</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DESTAQUE DA COLEÇÃO PLUS SIZE ================= -->
+  <section id="plus-size" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-5 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+      <div class="max-w-xl text-center md:text-left reveal-on-scroll">
+        <span class="text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-brand-gold block mb-2">CURVAS
+          IMPONENTES</span>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-medium tracking-wide text-brand-dark uppercase mb-3">PLUS
+          SIZE & CURVE</h2>
+        <p class="text-sm sm:text-base font-sans-modern text-brand-bronze leading-relaxed opacity-95">
+          Modelos projetados com sustentação reforçada e recortes inteligentes que abraçam o corpo de maneira sublime.
+          Porque a sensualidade não tem tamanhos, tem atitude.
+        </p>
+      </div>
+      <div class="reveal-on-scroll">
+        <a href="#destaques"
+          class="premium-btn inline-block bg-brand-bronze hover:bg-brand-dark text-[#E6DFD5] text-xs sm:text-sm font-bold tracking-[0.25em] uppercase px-8 sm:px-12 py-4 border border-brand-bronze hover:border-brand-dark">
+          VER PRODUTOS PLUS SIZE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 3: DEPOIMENTOS DE CLIENTES ================= -->
+  <section id="depoimentos"
+    class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-brand-cream relative overflow-hidden border-t border-brand-bronze border-opacity-5">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <span class="text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-brand-gold block mb-2">CONFIANÇA &
+        SATISFAÇÃO</span>
+      <h2
+        class="font-serif-luxury text-2xl sm:text-3xl font-medium tracking-wide uppercase text-brand-dark mb-8 sm:mb-10">
+        O QUE NOSSAS CLIENTES DIZEM</h2>
+
+      <!-- Container do Slider de Depoimentos -->
+      <div class="relative overflow-hidden mb-6">
+        <!-- Trilho do Slider de Depoimentos -->
+        <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
+
+          <!-- Depoimento 1 -->
+          <div class="w-full shrink-0 px-4 flex flex-col items-center">
+            <div class="flex items-center space-x-1 mb-3 text-[#F5C453]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+            <p class="font-serif-luxury text-lg sm:text-xl italic text-brand-bronze leading-relaxed max-w-xl mb-4">
+              "Tudo maravilhoso, o atendimento então... Continuem tratando cada cliente como único ❤️"
+            </p>
+            <span class="font-sans-modern font-semibold text-[10px] tracking-widest text-brand-dark uppercase">JUSSARA
+              C.</span>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="w-full shrink-0 px-4 flex flex-col items-center">
+            <div class="flex items-center space-x-1 mb-3 text-[#F5C453]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+            <p class="font-serif-luxury text-lg sm:text-xl italic text-brand-bronze leading-relaxed max-w-xl mb-4">
+              "Produtos de excelente qualidade, design sofisticado, elegante e sedutor."
+            </p>
+            <span class="font-sans-modern font-semibold text-[10px] tracking-widest text-brand-dark uppercase">CLEITON
+              F.</span>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="w-full shrink-0 px-4 flex flex-col items-center">
+            <div class="flex items-center space-x-1 mb-3 text-[#F5C453]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+            <p class="font-serif-luxury text-lg sm:text-xl italic text-brand-bronze leading-relaxed max-w-xl mb-4">
+              "Ótimos produtos e atendimento sensacional!"
+            </p>
+            <span class="font-sans-modern font-semibold text-[10px] tracking-widest text-brand-dark uppercase">JULIANA
+              I.</span>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="w-full shrink-0 px-4 flex flex-col items-center">
+            <div class="flex items-center space-x-1 mb-3 text-[#F5C453]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+            <p class="font-serif-luxury text-lg sm:text-xl italic text-brand-bronze leading-relaxed max-w-xl mb-4">
+              "Maravilhosa! A lingerie veste perfeitamente e a renda tem uma maciez incomparável. Ótima compra."
+            </p>
+            <span class="font-sans-modern font-semibold text-[10px] tracking-widest text-brand-dark uppercase">KELI
+              C.</span>
+          </div>
+
+          <!-- Depoimento 5 -->
+          <div class="w-full shrink-0 px-4 flex flex-col items-center">
+            <div class="flex items-center space-x-1 mb-3 text-[#F5C453]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+            <p class="font-serif-luxury text-lg sm:text-xl italic text-brand-bronze leading-relaxed max-w-xl mb-4">
+              "Autêntico e muito luxuoso. Entrega rápida e embalagem elegante e perfumada."
+            </p>
+            <span class="font-sans-modern font-semibold text-[10px] tracking-widest text-brand-dark uppercase">ÁGATA
+              R.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Indicador de Pontos (Gerado pelo JS) -->
+      <div id="testimonials-dots" class="flex justify-center items-center space-x-2"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= RODAPÉ INSTITUCIONAL E DETALHES DE CONTATO (Página 3 Continuação) ================= -->
+  <footer id="contato" class="bg-[#F2ECE4] border-t border-brand-bronze border-opacity-10 pt-16 pb-8 text-brand-bronze">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Colunas Principais do Rodapé -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 pb-12 border-b border-brand-bronze border-opacity-10">
+
+        <!-- Coluna 1: Localização (Endereço e Mapa) -->
+        <div class="flex flex-col text-center md:text-left">
+          <h3 class="font-sans-modern font-bold text-xs sm:text-sm tracking-[0.2em] uppercase text-brand-dark mb-6">
+            NOSSO ENDEREÇO</h3>
+          <div
+            class="flex items-start justify-center md:justify-start space-x-3 text-xs sm:text-sm tracking-wider mb-6">
+            <i class="fa-solid fa-location-dot text-brand-gold mt-1"></i>
+            <p class="leading-relaxed opacity-90 text-brand-bronze">
+              Av Dr. Carmosino F. Costa, N° 120<br>
+              Bairro: Cidade Verde<br>
+              Almenara - MG, CEP: 39900-000
+            </p>
+          </div>
+
+          <!-- Mini Google Maps Embed -->
+          <div class="w-full h-36 bg-[#E6DFD5] border border-brand-bronze border-opacity-20 shadow-sm p-1 rounded-sm">
+            <iframe
+              src="https://maps.google.com/maps?q=Loja%20Sheilla%20Matos%20%7C%20Lingerie%20Moda%20Feminina%2C%20Almenara%20-%20MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Atendimento (Detalhes de contato com telefone e Instagram corretos) -->
+        <div class="flex flex-col text-center md:text-left">
+          <h3 class="font-sans-modern font-bold text-xs sm:text-sm tracking-[0.2em] uppercase text-brand-dark mb-6">
+            ATENDIMENTO</h3>
+          <ul class="space-y-4 text-xs sm:text-sm tracking-wider">
+            <li class="flex items-center justify-center md:justify-start space-x-3">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <a href="tel:+5533987512055" class="hover:text-brand-dark transition-colors">(33) 98751-2055</a>
+            </li>
+            <li class="flex items-center justify-center md:justify-start space-x-3">
+              <i class="fa-brands fa-whatsapp text-green-600 font-bold text-base"></i>
+              <a href="#" class="whatsapp-link-dynamic hover:text-brand-dark font-medium transition-colors">Fale Conosco
+                (WhatsApp)</a>
+            </li>
+            <li class="flex items-center justify-center md:justify-start space-x-3">
+              <i class="fa-solid fa-envelope text-brand-gold"></i>
+              <a href="mailto:lojasheillamatos@gmail.com"
+                class="hover:text-brand-dark transition-colors">lojasheillamatos@gmail.com</a>
+            </li>
+            <li class="flex items-start justify-center md:justify-start space-x-3 text-xs opacity-90 leading-relaxed">
+              <i class="fa-solid fa-clock text-brand-gold mt-0.5"></i>
+              <div>
+                <p class="font-semibold text-brand-dark">Horário de Atendimento</p>
+                <p>Segunda à Sexta: 09:00hs - 19:00hs</p>
+                <p>Sábado: 09:00hs - 13:00hs</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Selos de Confiança e Integração com Instagram (Selos de Segurança) -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <h3 class="font-sans-modern font-bold text-xs sm:text-sm tracking-[0.2em] uppercase text-brand-dark mb-6">
+            SOCIAL & SEGURANÇA</h3>
+
+          <!-- Selo com a tag do Instagram -->
+          <a href="https://instagram.com/lojasheilla_matos" target="_blank" rel="noopener noreferrer"
+            class="flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-lg text-xs font-semibold tracking-wider hover:opacity-90 transition-all mb-8 shadow-sm">
+            <i class="fa-brands fa-instagram text-base"></i>
+            <span>@LOJASHEILLA_MATOS</span>
+          </a>
+
+          <p class="font-sans-modern font-bold text-[10px] tracking-[0.2em] uppercase text-brand-dark mb-4">SELOS DE
+            SEGURANÇA</p>
+
+          <!-- Grade de selos (semelhante à Imagem 2) -->
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
+
+            <!-- Selo Google Safe Browsing -->
+            <div
+              class="flex items-center space-x-2 bg-white px-3 py-2 border border-black border-opacity-5 rounded shadow-sm text-gray-700 text-[10px] font-sans">
+              <i class="fa-brands fa-google text-red-500 font-bold text-xs"></i>
+              <div class="text-left leading-none">
+                <p class="font-bold text-[8px] text-gray-500">Google</p>
+                <p class="font-extrabold text-gray-800 text-[9px]">Safe Browsing</p>
+              </div>
+            </div>
+
+            <!-- Loja Segura -->
+            <div
+              class="flex items-center space-x-2 bg-black text-white px-3 py-2 rounded shadow-sm text-[10px] font-sans">
+              <i class="fa-solid fa-shield-halved text-brand-gold text-xs"></i>
+              <div class="text-left leading-none">
+                <p class="text-gray-400 text-[7px] tracking-wider uppercase font-semibold">SITE BLINDADO</p>
+                <p class="font-bold text-[#E6DFD5] text-[9px]">Loja Protegida</p>
+              </div>
+            </div>
+
+            <!-- Selo simulado do Reclame Aqui -->
+            <div
+              class="flex items-center space-x-2 bg-white px-3 py-2 border border-black border-opacity-5 rounded shadow-sm text-[10px] font-sans text-gray-700 w-full sm:w-auto">
+              <div class="flex flex-col leading-none text-left">
+                <div class="flex items-center space-x-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                  <p class="font-bold text-[8px] text-gray-400">Verificado por</p>
+                </div>
+                <p class="font-extrabold text-green-600 text-[11px] mt-0.5">Reclame AQUI</p>
+                <div class="flex items-center space-x-0.5 text-[#F5C453] mt-0.5 text-[8px]">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="text-[7px] text-gray-400 font-medium ml-1">Konfidency</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Copyright do Rodapé e declaração da Marca -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4">
+        <p class="text-[10px] tracking-wider uppercase text-opacity-80">
+          &copy; 2026 LOJA SHEILLA MATOS. TODOS OS DIREITOS RESERVADOS.
+        </p>
+        <p class="text-[10px] tracking-wider uppercase text-opacity-80">
+          Desenvolvido com sofisticação e amor &hearts;
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= BOTÃO FLUTUANTE DO WHATSAPP ================= -->
+  <a href="#" target="_blank" rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center z-50 transition-colors focus:outline-none"
+    aria-label="Fale conosco no WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl font-bold"></i>
+  </a>
+
+  <!-- ================= MODAL DE OVERLAY DE BUSCA ================= -->
+  <div id="search-overlay"
+    class="fixed inset-0 bg-brand-dark bg-opacity-95 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button id="search-close" class="absolute top-6 right-6 text-brand-cream hover:text-white p-2"
+      aria-label="Fechar busca">
+      <i class="fa-solid fa-xmark text-2xl sm:text-3xl"></i>
+    </button>
+    <div class="w-full max-w-xl px-6 flex flex-col items-center">
+      <h3 class="font-serif-luxury text-2xl sm:text-3xl text-brand-gold tracking-widest uppercase mb-8">O que você
+        deseja buscar?</h3>
+      <div
+        class="relative w-full border-b-2 border-brand-gold border-opacity-45 focus-within:border-opacity-100 transition-colors py-2">
+        <input type="text" placeholder="Buscar lingerie, conjuntos, bodies..."
+          class="w-full bg-transparent text-white font-sans-modern text-lg sm:text-xl placeholder-gray-500 focus:outline-none pr-10">
+        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-brand-gold hover:text-white"
+          aria-label="Enviar pesquisa">
+          <i class="fa-solid fa-magnifying-glass text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DRAWER DA BARRA LATERAL DO CARRINHO ================= -->
+  <div id="cart-drawer"
+    class="fixed inset-y-0 right-0 w-full max-w-md bg-brand-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col border-l border-brand-bronze border-opacity-10">
+    <div class="h-20 sm:h-24 flex items-center justify-between px-6 border-b border-brand-bronze border-opacity-10">
+      <span
+        class="font-logo text-sm sm:text-base tracking-wider font-semibold text-brand-bronze flex items-center space-x-2">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>MEU CARRINHO</span>
+      </span>
+      <button id="cart-close" class="text-brand-bronze hover:text-brand-dark focus:outline-none p-2"
+        aria-label="Fechar carrinho">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Layout do estado de Carrinho Vazio (simulado) -->
+    <div class="flex-1 px-8 flex flex-col items-center justify-center text-center">
+      <div
+        class="w-20 h-20 rounded-full border border-brand-gold border-opacity-20 flex items-center justify-center mb-6 text-brand-gold opacity-80">
+        <i class="fa-solid fa-bag-shopping text-3xl"></i>
+      </div>
+      <h3 class="font-serif-luxury text-xl text-brand-dark tracking-wide uppercase mb-2">SEU CARRINHO ESTÁ VAZIO</h3>
+      <p class="text-xs sm:text-sm font-sans-modern text-brand-bronze opacity-80 max-w-xs mb-8">
+        Adicione lingeries sofisticadas ao seu carrinho para dar asas ao seu poder e sedução.
+      </p>
+      <a href="#destaques" id="cart-drawer-shop-btn"
+        class="premium-btn bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-xs font-bold tracking-[0.2em] uppercase px-8 py-3.5 border border-brand-dark hover:border-brand-gold">
+        VER DESTAQUES
+      </a>
+    </div>
+
+    <!-- Detalhes do Rodapé do Carrinho -->
+    <div class="p-6 border-t border-brand-bronze border-opacity-10 bg-black bg-opacity-5 flex flex-col space-y-4">
+      <div class="flex justify-between text-xs sm:text-sm font-semibold tracking-wider text-brand-dark">
+        <span>SUBTOTAL</span>
+        <span>R$ 0,00</span>
+      </div>
+      <button
+        class="w-full bg-brand-bronze opacity-50 cursor-not-allowed text-[#E6DFD5] text-xs font-bold tracking-widest uppercase py-4 flex items-center justify-center space-x-2">
+        <span>FINALIZAR PEDIDO</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL DE LOGIN ================= -->
+  <div id="login-modal"
+    class="fixed inset-0 bg-brand-dark bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+    <div
+      class="bg-brand-cream border border-brand-gold border-opacity-20 max-w-md w-full p-8 md:p-10 relative shadow-2xl flex flex-col items-center">
+
+      <!-- Botão de Fechar -->
+      <button id="login-close" class="absolute top-4 right-4 text-brand-bronze hover:text-brand-dark p-2"
+        aria-label="Fechar login">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <!-- Monograma -->
+      <div class="w-20 h-20 flex items-center justify-center mb-4">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+          <text x="32" y="72" font-family="'Indie Flower', cursive" font-size="78" font-weight="400" fill="#C5A880"
+            text-anchor="middle">S</text>
+          <text x="68" y="82" font-family="'Indie Flower', cursive" font-size="78" font-weight="400" fill="#5C4A37"
+            text-anchor="middle">M</text>
+        </svg>
+      </div>
+
+      <h3 class="font-serif-luxury text-2xl text-brand-dark tracking-widest uppercase mb-2">ENTRAR</h3>
+      <p class="text-xs font-sans-modern text-brand-bronze tracking-wide uppercase mb-8">Acesse sua conta premium</p>
+
+      <!-- Formulário de Login -->
+      <form id="login-form" class="w-full flex flex-col space-y-6">
+
+        <!-- Campo de E-mail -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="login-email"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">E-mail</label>
+          <input type="email" id="login-email" required placeholder="seuemail@exemplo.com"
+            class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-2 text-sm text-brand-dark focus:outline-none transition-colors">
+        </div>
+
+        <!-- Campo de Senha -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="login-password"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">Senha</label>
+          <div class="relative w-full">
+            <input type="password" id="login-password" required placeholder="Digite sua senha"
+              class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-2 pr-10 text-sm text-brand-dark focus:outline-none transition-colors">
+            <button type="button" id="login-toggle-password"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-brand-bronze hover:text-brand-dark"
+              aria-label="Mostrar/ocultar senha">
+              <i class="fa-regular fa-eye text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lembrar-me e Esqueci a Senha -->
+        <div class="flex items-center justify-between text-xs font-sans-modern text-brand-bronze pt-1">
+          <label class="flex items-center space-x-2 cursor-pointer select-none">
+            <input type="checkbox"
+              class="w-3.5 h-3.5 accent-brand-gold bg-transparent border border-brand-bronze border-opacity-35">
+            <span>Lembrar de mim</span>
+          </label>
+          <a href="#" id="login-forgot-btn" class="hover:text-brand-dark transition-colors">Esqueceu a senha?</a>
+        </div>
+
+        <!-- Botão de Enviar -->
+        <button type="submit"
+          class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-xs font-bold tracking-[0.2em] uppercase py-4 border border-brand-dark hover:border-brand-gold mt-4">
+          ACESSAR MINHA CONTA
+        </button>
+      </form>
+
+      <!-- Rodapé do Modal -->
+      <div class="mt-8 text-center text-xs text-brand-bronze">
+        <span>Não possui uma conta?</span>
+        <button id="login-go-to-register"
+          class="text-brand-dark font-bold hover:text-brand-gold transition-colors ml-1 uppercase tracking-wider">Cadastre-se</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL DE CADASTRO ================= -->
+  <div id="register-modal"
+    class="fixed inset-0 bg-brand-dark bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+    <div
+      class="bg-brand-cream border border-brand-gold border-opacity-20 max-w-md w-full p-8 md:p-10 relative shadow-2xl flex flex-col items-center">
+
+      <!-- Botão de Fechar -->
+      <button id="register-close" class="absolute top-4 right-4 text-brand-bronze hover:text-brand-dark p-2"
+        aria-label="Fechar cadastro">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <!-- Monograma -->
+      <div class="w-20 h-20 flex items-center justify-center mb-4">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+          <text x="32" y="72" font-family="'Indie Flower', cursive" font-size="78" font-weight="400" fill="#C5A880"
+            text-anchor="middle">S</text>
+          <text x="68" y="82" font-family="'Indie Flower', cursive" font-size="78" font-weight="400" fill="#5C4A37"
+            text-anchor="middle">M</text>
+        </svg>
+      </div>
+
+      <h3 class="font-serif-luxury text-2xl text-brand-dark tracking-widest uppercase mb-2">CADASTRAR</h3>
+      <p class="text-xs font-sans-modern text-brand-bronze tracking-wide uppercase mb-6">Crie sua assinatura de estilo
+      </p>
+
+      <!-- Formulário de Cadastro -->
+      <form id="register-form" class="w-full flex flex-col space-y-4 max-h-[60vh] overflow-y-auto pr-1 no-scrollbar">
+
+        <!-- Campo de Nome -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="register-name" class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">Nome
+            Completo</label>
+          <input type="text" id="register-name" required placeholder="Digite seu nome"
+            class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-1.5 text-sm text-brand-dark focus:outline-none transition-colors">
+        </div>
+
+        <!-- Campo de E-mail -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="register-email"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">E-mail</label>
+          <input type="email" id="register-email" required placeholder="seuemail@exemplo.com"
+            class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-1.5 text-sm text-brand-dark focus:outline-none transition-colors">
+        </div>
+
+        <!-- Campo de Telefone / WhatsApp -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="register-phone"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">WhatsApp / Celular</label>
+          <input type="tel" id="register-phone" required placeholder="(33) 98751-2055"
+            class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-1.5 text-sm text-brand-dark focus:outline-none transition-colors">
+        </div>
+
+        <!-- Campo de Senha -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="register-password"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">Senha</label>
+          <div class="relative w-full">
+            <input type="password" id="register-password" required placeholder="Mínimo 6 caracteres"
+              class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-1.5 pr-10 text-sm text-brand-dark focus:outline-none transition-colors">
+            <button type="button" id="register-toggle-password"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-brand-bronze hover:text-brand-dark"
+              aria-label="Mostrar/ocultar senha">
+              <i class="fa-regular fa-eye text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Campo de Confirmação de Senha -->
+        <div class="flex flex-col space-y-1 relative">
+          <label for="register-confirm-password"
+            class="text-[10px] tracking-wider uppercase font-semibold text-brand-bronze">Confirmar Senha</label>
+          <input type="password" id="register-confirm-password" required placeholder="Repita sua senha"
+            class="w-full bg-transparent border-b border-brand-bronze border-opacity-35 focus:border-brand-dark py-1.5 text-sm text-brand-dark focus:outline-none transition-colors">
+        </div>
+
+        <!-- Aceite dos Termos -->
+        <div
+          class="flex items-start space-x-2 text-[11px] text-brand-bronze pt-1 leading-tight select-none font-sans-modern">
+          <input type="checkbox" id="register-terms" required
+            class="w-3.5 h-3.5 mt-0.5 accent-brand-gold bg-transparent border border-brand-bronze border-opacity-35">
+          <label for="register-terms" class="cursor-pointer">Declaro que aceito as <a href="#"
+              class="text-brand-dark underline font-semibold hover:text-brand-gold">Políticas de Privacidade</a> e
+            Termos de Uso da Loja Sheilla Matos.</label>
+        </div>
+
+        <!-- Botão de Enviar -->
+        <button type="submit"
+          class="premium-btn w-full bg-brand-dark hover:bg-brand-gold hover:text-brand-dark text-[#E6DFD5] text-xs font-bold tracking-[0.2em] uppercase py-4 border border-brand-dark hover:border-brand-gold mt-4">
+          CRIAR MINHA CONTA
+        </button>
+      </form>
+
+      <!-- Rodapé do Modal -->
+      <div class="mt-6 text-center text-xs text-brand-bronze shrink-0">
+        <span>Já possui uma conta?</span>
+        <button id="register-go-to-login"
+          class="text-brand-dark font-bold hover:text-brand-gold transition-colors ml-1 uppercase tracking-wider">Entre</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts Personalizados -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
